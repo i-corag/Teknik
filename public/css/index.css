@@ -30,6 +30,14 @@ body {
     width: calc ( 100vw - (100vw - 100%));
 }
 
+h2 {
+    font-family: 'din alternate';
+    letter-spacing: .03em;
+    font-size: 1em;
+    color:var(--lightYellow-color);
+}
+
+
 
 
 
