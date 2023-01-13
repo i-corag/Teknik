@@ -1,16 +1,30 @@
 <header>
     <nav>
-        <div class="headerLogo">
+        <div class="header-logo">
             <img src="../assets/logoH.png" alt="Logo"/>        
         </div>
 
-        <div class="headerNav">
-                <a class="mobile" id="contact" href="contact">contact us</a>
-                <a class="mobile"  id="menu" href="Menu"><i class="fa-solid fa-bars"></i></a>
-                <a class="desktop" href="home">home</a>
-                <a class="desktop" href="services">services</a>
-                <a class="desktop" href="portfolio">portfolio</a>
-                <a class="desktop" href="contact">contact us</a>
-        </div>
+        <ul class="header-nav-mobile">
+            <li class="mobile-li"><a class="mobile-li" id="home" href="home">home</a></li>
+            <li class="mobile-li">
+                <input type="checkbox" id="dropdown">
+                <label for="dropdown"><i class="fa-solid fa-bars"></i></label>
+                <ul class="mobile-dropdown">
+                    <li class="mobile-dropdown-li" id="mobile-dropdown-li-1"><a class="mobile-dropdown-li-a" href="services">services</a></li>
+                    <li class="mobile-dropdown-li" ><a class="mobile-dropdown-li-a" href="portfolio">portfolio</a></li>
+                    <li class="mobile-dropdown-li" id="mobile-dropdown-li-2"><a class="mobile-dropdown-li-a" href="contact">contact us</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="header-nav-desktop">
+            <li class="desktop-li"><a class="desktop-li-a" href="home">home</a></li>
+            <li class="desktop-li"><a class="desktop-li-a" href="services">services</a></li>
+            <li class="desktop-li"><a class="desktop-li-a" href="portfolio">portfolio</a></li>
+            <li class="desktop-li"><a class="desktop-li-a" href="contact">contact us</a></li>
+        </ul>
+
     </nav>
 </header>
+
+

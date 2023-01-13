@@ -6,6 +6,7 @@ main {
 #banner {
     position: relative;
     height: 60vh;
+    z-index: -1; /* to be behind the header dropdown*/
 }
 
 #text {
