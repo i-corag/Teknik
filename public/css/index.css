@@ -30,14 +30,40 @@ body {
     width: calc ( 100vw - (100vw - 100%));
 }
 
+
 h2 {
     font-family: 'din alternate';
     letter-spacing: .03em;
     font-size: 1em;
     color:var(--lightYellow-color);
+    text-transform: uppercase;
 }
 
+button {
+    padding:.5em .3em;
+    border-radius: 4px;
+    background-color: var(--darkYellow-color);
+    text-align: center;
+    font-family: 'din alternate';
+    font-size: .8em;
+    color: var(--white-color);
+}
 
+.text-ligth {
+    font-family: 'din pro cond';
+    font-size: 1em;
+    letter-spacing: .03em;
+    line-height: 1.5em;
+    color: var(--darkGrey-color);  
+}
+
+.text-heavy {
+    font-family: 'din alternate';
+    font-size: 1em;
+    letter-spacing: .03em;
+    line-height: 1.5em;
+    color: var(--darkGrey-color);  
+}
 
 
 

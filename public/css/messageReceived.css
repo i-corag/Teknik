@@ -1,0 +1,46 @@
+main {
+    min-height: 70vw;
+    margin:8em 1em;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1em;
+}
+
+/* MOBILE PLUS */
+@media (min-width: 414px) {
+    h2 {
+        font-size: 1.2em;
+    }
+    .text-ligth {
+        font-size: 1.3em;
+    }
+}
+    
+/* TABLET */
+@media (min-width: 700px){
+    main {
+        min-height:50vw;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .text-ligth {
+        font-size: 1.5em;
+    }
+}
+    
+/* NOTEBOOK */
+@media (min-width: 1200px) {
+}
+
+/* RETINA */
+@media (min-width: 1900px) {
+    h2 {
+        font-size: 1.8em;
+    }
+    .text-ligth {
+        font-size: 2em;
+    }
+}

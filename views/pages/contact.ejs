@@ -17,13 +17,15 @@
     
 </head>
 <body>
-
     <%- include ('../partials/header.ejs') %>
 
     <main>
-    <form id="login" action="/login" method="post">
+    
+        <h2>how can we help you?</h2>
+    
+        <form id="contact" action="/contact" method="post">
         <label for="name"></label>
-        <input class="login"
+        <input class="contact"
             required
             id="name"
             type="text"
@@ -31,7 +33,7 @@
             placeholder="Name"
         />
         <label for="email"></label>
-        <input class="login"
+        <input class="contact"
             required
             id="email"
             type="email"
@@ -39,7 +41,7 @@
             placeholder="Email"
         />
         <label for="phone"></label>
-        <input class="login"
+        <input class="contact"
             required
             id="phone"
             type="tel"
@@ -47,16 +49,18 @@
             placeholder="Phone"
         />
         <label for="message"></label>
-        <textarea class="login"
+        <textarea class="contact"
             required
             id="message"
             rows="8"
-         >Message</textarea>   
+            placeholder="Message"
+         ></textarea>   
        
-        <button id="ingresar" type="submit">SEND</button>
-    </form>
+        <button id="contact-send" type="submit">SEND</button>
+        </form>
 
-</main>
-<%- include ('../partials/footer.ejs') %>
+    </main>
+    
+    <%- include ('../partials/footer.ejs') %>
 </body>
 </html>

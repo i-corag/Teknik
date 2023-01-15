@@ -119,22 +119,6 @@ main {
     gap: 2em;
 }
 
-.text-ligth {
-    font-family: 'din pro cond';
-    font-size: 1em;
-    letter-spacing: .03em;
-    line-height: 1.5em;
-    color: var(--darkGrey-color);  
-}
-
-.text-heavy {
-    font-family: 'din alternate';
-    font-size: 1em;
-    letter-spacing: .03em;
-    line-height: 1.5em;
-    color: var(--darkGrey-color);  
-}
-
 .text-heavy span {
     color: var(--lightYellow-color);  
 }
