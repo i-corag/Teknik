@@ -1,0 +1,154 @@
+#forms {
+    position: absolute;
+    top: 4%;
+    left: 16%;
+    width: 90%;
+    height: 100vw; /* the height is half*/
+}
+
+#hexagons {
+    --s: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(var(--s)/2));
+    grid-auto-rows: calc(var(--s) * 1.1547 * 0.75);
+    justify-content: center;
+    margin: 0 1em;
+}
+
+.hexagon {
+    position: relative;
+    background-color: var(--darkGrey-color);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    height: calc(var(--s) * 1.1547);
+    grid-column: span 2;
+}
+
+.hexagon-img {
+    position: absolute;
+    top: 2%; /*para que quede separado el hexagono de color que hace el borde*/
+    left: 2%; /*para que quede separado el hexagono de color que hace el borde*/
+    width: 96%; /*para que quede separado el hexagono de color que hace el borde*/
+    height: 96%; /*para que quede separado el hexagono de color que hace el borde*/
+    object-fit: cover;
+    filter: grayscale(60%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 300ms;
+}
+
+.hexagon-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hexagon:first-of-type {
+    grid-column: 5 / span 2;
+    background-color: var(--darkYellow-color);
+}
+
+.hexagon:nth-of-type(2) {
+    grid-column :4 /span 2;
+  }
+
+.hexagon:nth-of-type(7) {
+    grid-column :4 /span 2;
+  }
+.hexagon:nth-of-type(4) {
+    background-color: var(--darkYellow-color);
+}
+.hexagon:nth-of-type(5) {
+    background-color: var(--darkYellow-color);
+}
+
+#circle {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    width: 75%;
+    height: 55%;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--white-color), var(--lightYellow-color));
+}
+
+
+/* MOBILE PLUS */
+@media (min-width: 356px) {
+    #forms {
+        left: 15%;
+    }
+    #hexagons {
+    --s: 5em;
+    }
+}
+
+@media (min-width: 414px) {
+    #hexagons {
+        --s: 5.5em;
+    }
+}
+
+/* TABLET */
+@media (min-width: 475px){
+    #forms {
+        left: 20%;
+    }
+    #hexagons {
+        --s: 7em;
+    }
+    .hexagon:nth-of-type(4) {
+        grid-column :1 /span 2;
+    }
+    .hexagon:nth-of-type(7) {
+        grid-column :2 /span 2;
+    }
+}
+@media (min-width: 950px){
+    #forms {
+        left: 25%;
+    }
+    #hexagons {
+        --s: 8em;
+    }
+    #circle {
+        top: 10%;
+    }
+}
+@media (min-width: 1000px){
+    #hexagons {
+        --s: 9em;
+    }
+}
+
+/* NOTEBOOK */
+@media (min-width: 1200px) {
+    #forms {
+        left: 20%;
+    }
+    #hexagons {
+        --s: 11em;
+    }
+    #circle {
+        top: 5%;
+        left: 45%;
+    }
+
+}
+
+/* RETINA */
+@media (min-width: 1440px) {
+    #hexagons {
+        --s: 13em;
+    }
+}
+
+@media (min-width: 1900px) {
+    #circle {
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        width: 50%;
+        height: 40%;
+        border-radius: 50%;
+    }
+}
+
