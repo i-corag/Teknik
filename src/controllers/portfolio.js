@@ -1,4 +1,4 @@
-const {projects} = require('../conceptual/portfolio.js');
+const {projects} = require('../conceptual/projects.js');
 
 const sendPortfolioView = (req, res) => {
     return res.render ('pages/portfolio.ejs', {projects});

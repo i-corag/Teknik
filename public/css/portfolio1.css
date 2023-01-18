@@ -1,0 +1,162 @@
+main {
+    background: rgb(123, 158, 158);
+    overflow: hidden;
+    margin: 1em 0;
+}
+#portfolio-hexGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 1em auto;
+  font-family: 'din alternate';
+  font-size: 15px;
+  list-style-type: none;
+}
+
+.portfolio-hex {
+    position: relative;
+    visibility: hidden;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    --n-hex: 2; /*number of hexagons on odd rows */
+    --w-hex: calc(100% / (var(--n-hex)));  /* hexagon width based on the number of hexagons */
+    width: var(--w-hex);
+  }
+
+
+.portfolio-hex::after{
+    content:'';
+    display:block;
+    padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5       NO ENTIENDO*/
+  }
+
+  .portfolio-hexIn{
+    position: absolute;
+    width:96%;
+    margin:2%;
+    overflow: hidden;
+    visibility: hidden;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    background-color: var(--lightYellow-color);
+    padding-bottom: 110.851%; /* =  width / sin(60) */
+
+    -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+        -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+            transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+  }
+
+.portfolio-hexIn * {
+    position: absolute;
+    visibility: visible;
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+
+.portfolio-hexLink {
+  display:block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--white-color);
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+      -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+          transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+.portfolio-hex img {
+  left: -100%;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--white-color);
+  -webkit-transform: rotate3d(0,0,0,0deg);
+      -ms-transform: rotate3d(0,0,0,0deg);
+          transform: rotate3d(0,0,0,0deg);
+}
+
+.portfolio-hex h1, .portfolio-hex p {
+  width: 100%;
+  padding: 5%;
+  box-sizing:border-box;
+  background-color: var(--lightYellow-color);
+  opacity: 0.8;
+  font-weight: 300;
+  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+          transition:          transform .2s ease-out, opacity .3s ease-out;
+}
+
+.portfolio-hex h1 {
+  bottom: 50%;
+  padding-top:50%;
+  font-size: 1.5em;
+  z-index: 1;
+  -webkit-transform:translate3d(0,-100%,0);
+      -ms-transform:translate3d(0,-100%,0);
+          transform:translate3d(0,-100%,0);
+}
+.portfolio-hex h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 10%;
+  text-align: center;
+  border-bottom: 1px solid var(--white-color);
+}
+.portfolio-hex p {
+  top: 50%;
+  padding-bottom:50%;
+  -webkit-transform:translate3d(0,100%,0);
+      -ms-transform:translate3d(0,100%,0);
+          transform:translate3d(0,100%,0);
+}
+
+.portfolio-hexLink:hover h1, .portfolio-hexLink:hover p{
+  -webkit-transform:translate3d(0,0,0);
+      -ms-transform:translate3d(0,0,0);
+          transform:translate3d(0,0,0);
+}
+
+
+/* MOBILE PLUS */
+@media (min-width: 300px) and (max-width: 760px){
+  .portfolio-hex:nth-child(3n+3){  /* first hexagon of even rows */
+    margin-left: calc( var(--w-hex) / 2);  /* value of margin left is half the width of one hexagon  */
+  }
+}
+/* TABLET */
+
+@media (min-width: 761px) and (max-width: 1150px){
+  .portfolio-hex {
+    --n-hex: 3; /*number of hexagons on odd rows */
+    --w-hex: calc(100% / (var(--n-hex)));  /* hexagon width based on the number of hexagons */
+    width: var(--w-hex);
+  }
+  .portfolio-hex:nth-child(5n+4){  /* first hexagon of even rows */
+  margin-left: calc( var(--w-hex) / 2);  /* value of margin left is half the width of one hexagon  */
+  }
+}
+
+/* NOTEBOOK */
+@media (min-width: 1151px) and (max-width: 1500px){
+  .portfolio-hex {
+    --n-hex: 4; /*number of hexagons on odd rows */
+    --w-hex: calc(100% / (var(--n-hex)));  /* hexagon width based on the number of hexagons */
+    width: var(--w-hex);
+  }
+  .portfolio-hex:nth-child(7n+5){  /* first hexagon of even rows */
+  margin-left: calc( var(--w-hex) / 2);  /* value of margin left is half the width of one hexagon  */
+  }
+}
+
+/* RETINA */
+@media (min-width: 1501px){
+  .portfolio-hex {
+    --n-hex: 5; /*number of hexagons on odd rows */
+    --w-hex: calc(100% / (var(--n-hex)));  /* hexagon width based on the number of hexagons */
+    width: var(--w-hex);
+  }
+  .portfolio-hex:nth-child(9n+6){  /* first hexagon of even rows */
+  margin-left: calc( var(--w-hex) / 2);  /* value of margin left is half the width of one hexagon  */
+  }
+}
