@@ -3,7 +3,7 @@ const router = Router();
 
 const { sendContactForm , sendMessageReceived} = require ('../controllers/contact.js');
 
-router.get ('/contact' , sendContactForm);
-router.post ('/contact' , sendMessageReceived);
+router.get ('/' , sendContactForm);
+router.post ('/' , sendMessageReceived);
 
 module.exports = router;

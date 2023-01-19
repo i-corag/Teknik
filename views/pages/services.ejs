@@ -18,7 +18,29 @@
 <body>
     <%- include ('../partials/header.ejs') %>
     <main>
-    <h1>This are our services</h1>
+    <p class="text-ligth">Our interdisciplinary team is committed to provide technical solutions to your projects.<br>Characterized by constant improvement in structural design, expedition and detail orientation with BIM implementation.<br>Technique, efficiency and experience are the bases of our work.</p>
+    <h2>our solutions to your business</h2>
+    <ul class="services">
+        <% services.forEach ((service) => { %>
+        <li class="service">
+            <img src= "<%= service.img %>" alt="service image"/>
+            <h3><%= service.name %></h3>
+            <p><%= service.description %></p>
+        </li>
+        <% }); %>
+    </ul>
+
+    <h2>why choose us?</h2>
+    <ul class="premises">
+        <% premises.forEach ((premise) => { %>
+        <li class="premise">
+            <img src= "<%= premise.img %>" alt="service image"/>
+            <h3><%= premise.name %></h3>
+            <p><%= premise.description %></p>
+        </li>
+        <% }); %>
+    </ul>
+
     </main>
     <%- include ('../partials/footer.ejs') %>
 </body>

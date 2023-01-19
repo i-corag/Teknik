@@ -15,9 +15,9 @@ const portfolioRoutes = require('./routes/portfolio');
 const contactRoutes = require('./routes/contact');
 
 app.use ('/' , homeRoutes);
-app.use ('/', servicesRoutes);
-app.use ('/', portfolioRoutes);
-app.use ('/', contactRoutes);
+app.use ('/services', servicesRoutes);
+app.use ('/portfolio', portfolioRoutes);
+app.use ('/contact', contactRoutes);
 
 
 app.listen (process.env.PORT , () => {

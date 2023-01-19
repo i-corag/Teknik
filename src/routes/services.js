@@ -3,6 +3,6 @@ const router = Router();
 
 const {sendServicesView} = require ('../controllers/services');
 
-router.get ('/services' , sendServicesView);
+router.get ('/' , sendServicesView);
 
 module.exports = router;
