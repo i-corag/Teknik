@@ -102,7 +102,7 @@ footer {
     align-items:center;
 }
 
-.office h3 {
+.office h4 {
     text-transform: uppercase;
     color: var(--darkYellow-color);
     font-size: .7em;
@@ -133,7 +133,7 @@ footer {
     font-size: .9em; 
 }
 
-.office h3 {
+.office h4 {
     font-size: .9em;
 }
 
@@ -202,7 +202,7 @@ footer {
     width: 100%;
     padding: .5em 0em;
 }
-.office h3 {
+.office h4 {
     font-size: 1em;
 }
 .info {
@@ -247,7 +247,7 @@ footer {
     #socialMedia {
         gap: 2em;
     }
-    .office h3 {
+    .office h4 {
         font-size: 1.5em;
     }
     .info {

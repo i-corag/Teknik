@@ -10,6 +10,7 @@
     <link href="https://fonts.cdnfonts.com/css/din-pro-cond" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/index.css" />
     <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/services.css" />
     <link rel="stylesheet" href="../../../css/footer.css" />
     <link rel="icon" href="../../public/assets/fav.ico">
     <title>Teknik Ingenieria y Diseño</title>
@@ -18,14 +19,17 @@
 <body>
     <%- include ('../partials/header.ejs') %>
     <main>
-    <p class="text-ligth">Our interdisciplinary team is committed to provide technical solutions to your projects.<br>Characterized by constant improvement in structural design, expedition and detail orientation with BIM implementation.<br>Technique, efficiency and experience are the bases of our work.</p>
+    <p class="text-ligth" id="services-p-mobile" >Our interdisciplinary team is committed to provide technical solutions to your projects.</p>
+    <p class="text-ligth" id="services-p-desktop" >Our interdisciplinary team is committed to provide technical solutions to your projects.<br>Characterized by constant improvement in structural design, expedition and detail orientation with BIM implementation.<br>Technique, efficiency and experience are the bases of our work.</p>
     <h2>our solutions to your business</h2>
     <ul class="services">
         <% services.forEach ((service) => { %>
         <li class="service">
             <img src= "<%= service.img %>" alt="service image"/>
-            <h3><%= service.name %></h3>
-            <p><%= service.description %></p>
+            <div>
+                <h3><%= service.name %></h3>
+                <p class="text-ligth"><%= service.description %></p>
+            </div>
         </li>
         <% }); %>
     </ul>
@@ -35,8 +39,8 @@
         <% premises.forEach ((premise) => { %>
         <li class="premise">
             <img src= "<%= premise.img %>" alt="service image"/>
-            <h3><%= premise.name %></h3>
-            <p><%= premise.description %></p>
+            <h4><%= premise.name %></h4>
+            <p class="text-ligth"><%= premise.description %></p>
         </li>
         <% }); %>
     </ul>

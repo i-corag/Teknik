@@ -2,7 +2,7 @@ const services = [
     { 
         id:"1",
         name: "desing and detailed",
-        description: "We work with pre cast and site cast concrete structures, short and long span steel structures.\nExperts in antennas of all kinds: monopole, pedestal or roof top, self-supporting tower, guyed mast, etc.\nSpecial structures: tensile structures, billboards, foundations for dynamic equipment, breakwaters.",
+        description: "We work with pre cast and site cast concrete structures, short and long span steel structures.\n Experts in antennas of all kinds: monopole, pedestal or roof top, self-supporting tower, guyed mast, etc.\n Special structures: tensile structures, billboards, foundations for dynamic equipment, breakwaters.",
         img:"/assets/banner/imag1.jpeg",
     },
     { 

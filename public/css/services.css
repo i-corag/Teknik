@@ -1,0 +1,252 @@
+main{
+    margin: 3em 1em;
+    overflow: hidden;
+}
+
+#services-p-mobile , #services-p-desktop {
+    margin: 1em 0;
+}
+
+h2{
+    margin: 4em 0 2em 0;
+}
+
+#services-p-desktop{
+    display: none;
+}
+
+.services{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.services li {
+    width: 100%;
+    height: 13em;
+    border: 1px solid var(--lightGrey-color);
+    border-radius: 4px;
+}
+
+.services li img{
+    width: 100%;
+    height: 60%;
+    object-fit:cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.services li div{
+    width: 100%;
+    height: 40%;
+    padding: 0 .5em .6em .5em;
+}
+
+.services li div p{
+    height: 75%;
+    line-height: 1.2em;
+    overflow-y: auto;
+    padding: .3em;
+}
+
+.premises{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2em;
+}
+
+.premises li{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premises li img{
+    width: 40%;
+    object-fit:cover;
+}
+
+.premises li p{
+    line-height: 1.2em;
+}
+
+.premises li h4{
+    font-family: 'din alternate';
+    margin: .5em; 
+    letter-spacing: .03em;
+    font-size: 1em;
+    color:var(--lightYellow-color);
+}
+
+/* MOBILE PLUS */
+@media (min-width: 414px) {
+    .text-ligth{
+        font-size: 1.3em;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    .services li {
+        height: 16em;
+    }
+    .services li div{
+        padding: 0 .5em 1.3em .5em;
+    }
+    h3{
+        font-size: 1em;
+        margin-top: .5em;
+    }
+    .premises li h4{
+        font-size: 1.2em;
+    }
+}
+
+/* TABLET */
+@media (min-width: 760px){
+    main{
+        margin: 3em 6em;
+    }
+    .text-ligth{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .services li {
+        height: 15em;
+    }
+    h3{
+        font-size: 1.2em;
+    }
+    .premises li h4{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1000px){
+    #services-p-mobile{
+        display: none;
+    }
+    #services-p-desktop{
+        display: flex;
+        justify-content: center;
+        margin: 1em;
+    }
+    .text-ligth{
+        font-size: 1.6em;
+    }
+    h2{
+        font-size: 1.7em;
+    }
+    .services{
+        gap: 4em;
+    }
+    .services li {
+        display: flex;
+        height: 18em;
+        box-shadow: 0px 0px 3px var(--lightGrey-color);
+    }
+    .services li img{
+        width: 40%;
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+        padding:.5em;
+    }
+    .services li div{
+        width: 60%;
+        height: 100%;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .services li div h3{
+        height: 40%;
+        padding:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4em;
+    }
+    .services li div p{
+        height: 60%;
+        line-height: 1.2em;
+        padding:0;
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+    }
+    .premises{
+        gap:4em;
+    }
+    .premises li img{
+        width: 30%;
+    }
+    .premises li h4{
+        font-size: 1.7em;
+    }
+   
+}
+
+/* NOTEBOOK */
+@media (min-width: 1100px) {
+    .services{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .services li div{
+        padding: 1.5em;
+    }
+    .services li div p{
+       font-size: 1.4em;
+    }
+    .premises li{
+        width: 25%;
+    }
+    .premises li img{
+        width: 100%;
+    }
+    .premises li p{
+        font-size: 1.3em;
+        line-height: 1.2em;
+    }
+    .premises li h4{
+        font-size: 1.4em;
+    }
+}
+
+/* RETINA */
+@media (min-width: 1440px) {
+    .text-ligth{
+        font-size: 2em;
+    }
+    h2{
+        font-size: 2.2em;
+    }
+}
+
+@media (min-width: 1800px) {
+    .text-ligth{
+        font-size: 2.6em;
+    }
+    h2{
+        font-size: 2.8em;
+    }
+    .services{
+        width: 60%;
+    }
+    .services li {
+        height: 20em;
+    }
+    .services li div p , .services li div h3{
+        font-size: 1.8em;
+    }
+    .premises li p, .premises li h4{
+        font-size: 1.8em;
+    }
+}
+

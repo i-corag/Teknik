@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap');
 
-
-                
-
 *{
     margin: 0;
     padding: 0;
@@ -37,6 +34,16 @@ h2 {
     font-size: 1em;
     color:var(--lightYellow-color);
     text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'din alternate';
+    letter-spacing: .03em;
+    font-size: .9em;
+    color:var(--darkGrey-color);
+    text-transform: uppercase;
+    text-align: center;
 }
 
 button {
@@ -54,7 +61,8 @@ button {
     font-size: 1em;
     letter-spacing: .03em;
     line-height: 1.5em;
-    color: var(--darkGrey-color);  
+    color: var(--darkGrey-color);
+    text-align: center;
 }
 
 .text-heavy {
@@ -63,6 +71,7 @@ button {
     letter-spacing: .03em;
     line-height: 1.5em;
     color: var(--darkGrey-color);  
+    text-align: center;
 }
 
 
