@@ -13,7 +13,7 @@
 
             <h1>how can we help you?</h1>
 
-            <form id="contact" action="https://formsubmit.co/info@teknik-id.com" method="POST">
+            <form id="contact" action="https://formsubmit.co/icoraglio@gmail.com" method="POST">
                 <input class="contact" required id="name" type="text" name="name" placeholder="Name" />
                 <input class="contact" required id="email" type="email" name="email" placeholder="Email" />
                 <input class="contact" required id="phone" type="tel" name="phone" placeholder="Phone" />
@@ -22,7 +22,7 @@
 
                 <button id="contact-send" type="submit">SEND</button>
 
-                <input type="hidden" name="_next" value="http://localhost:8080/contact/received" />
+                <input type="hidden" name="_next" value="<%= baseUrl %>/contact/received" />
                 <input type="hidden" name="_captcha" value="false" />
             </form>
 
