@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/contact.css" />
-</head>
+    <link rel="stylesheet" href="/css/contact.css" />
+  </head>
 
-<body>
+  <body>
     <%- include ('../partials/header.ejs') %>
 
-        <main id="contact-page">
+    <main id="contact-page">
+      <h1>how can we help you?</h1>
 
-            <h1>how can we help you?</h1>
+      <form
+        id="contact"
+        action="https://formsubmit.co/icoraglio@gmail.com"
+        method="POST"
+      >
+        <input
+          class="contact"
+          required
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          class="contact"
+          required
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <input
+          class="contact"
+          required
+          id="phone"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+        />
+        <textarea
+          class="contact"
+          required
+          id="message"
+          rows="8"
+          name="message"
+          placeholder="Message"
+        ></textarea>
 
-            <form id="contact" action="https://formsubmit.co/icoraglio@gmail.com" method="POST">
-                <input class="contact" required id="name" type="text" name="name" placeholder="Name" />
-                <input class="contact" required id="email" type="email" name="email" placeholder="Email" />
-                <input class="contact" required id="phone" type="tel" name="phone" placeholder="Phone" />
-                <textarea class="contact" required id="message" rows="8" name="message"
-                    placeholder="Message"></textarea>
+        <button id="contact-send" type="submit">SEND</button>
 
-                <button id="contact-send" type="submit">SEND</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="<%= baseUrl %>/contact/received"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+      </form>
+    </main>
 
-                <input type="hidden" name="_next" value="<%= baseUrl %>/contact/received" />
-                <input type="hidden" name="_captcha" value="false" />
-            </form>
-
-
-        </main>
-
-        <%- include ('../partials/footer.ejs') %>
-            <%- include ('../partials/script.ejs') %>
-</body>
-
+    <%- include ('../partials/footer.ejs') %> <%- include
+    ('../partials/script.ejs') %>
+  </body>
 </html>
