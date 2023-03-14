@@ -1,0 +1,82 @@
+<script>
+    const images = document.querySelectorAll(".project-gallery img");
+    let imgIndex;
+    let imgSrc;
+    // onclick -> get images src 
+    images.forEach((img, i) => {
+        img.addEventListener("click", (e) => {
+            imgSrc = e.target.src;
+            //run modal function
+            imgModal(imgSrc);
+            //index of the next image
+            imgIndex = i;
+        });
+    });
+    //creating the modal
+    let imgModal = (src) => {
+
+        const overlay = document.createElement("div"); //create modal div
+        overlay.setAttribute("class", "overlay");
+        document.querySelector('main').append(overlay); //add modal to the parent element
+
+        const slideshow = document.createElement("div");  //create zoom container
+        slideshow.setAttribute("class", "slideshow")
+        document.querySelector(".overlay").append(slideshow); //add zoom container to the parent element 
+
+        const newImage = document.createElement("img");  //adding image to modal
+        newImage.setAttribute("src", src);
+        slideshow.append(newImage); //add image to the zoom container
+
+        //create the close button
+        const closeBtn = document.createElement("i");
+        closeBtn.setAttribute("class", "fa-regular fa-circle-xmark");
+        //close function
+        closeBtn.addEventListener("click", function () {
+            overlay.remove();
+        });
+
+        //create next button
+        const nextBtn = document.createElement("i");
+        nextBtn.setAttribute("class", "fa-regular fa-circle-right");
+        // change the src of current image to the src of next image
+        nextBtn.addEventListener("click", function () {
+            newImage.setAttribute("src", nextImg());
+        });
+
+        //create previous button
+        const prevBtn = document.createElement("i");
+        prevBtn.setAttribute("class", "fa-regular fa-circle-left");
+        // change the src of current image to the src of pevious image
+        prevBtn.addEventListener("click", function () {
+            newImage.setAttribute("src", prevImg());
+        });
+
+        //add buttons to the modal
+        slideshow.append(closeBtn, nextBtn, prevBtn);
+
+
+        //next image function
+        let nextImg = () => {
+            imgIndex++;
+            //check if it is the the last image
+            if (imgIndex >= images.length) {
+                imgIndex = 0
+            }
+            //return src of the new image
+            return images[imgIndex].src;
+        };
+
+        //previous image function
+        let prevImg = () => {
+            imgIndex--;
+            //check if it is the first image
+            if (imgIndex < 0) {
+                imgIndex = images.length - 1
+            }
+            //return src of previous image
+            return images[imgIndex].src
+        }
+
+    }
+
+</script>

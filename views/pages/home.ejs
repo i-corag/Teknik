@@ -1,91 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-pro-cond" rel="stylesheet">
-    <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/home.css" />
-    <link rel="stylesheet" href="../../../css/hexagon.css" />
-    <link rel="stylesheet" href="../../../css/footer.css" />
-    <link rel="icon" href="../../public/assets/fav.ico">
-    <title>Teknik Ingenieria y Diseño</title>
-    
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/home/home.css" />
+        <link rel="stylesheet" href="/css/home/hexagon.css" />
+        <link rel="stylesheet" href="/css/home/premises.css" />
+        <link rel="stylesheet" href="/css/home/about.css" />
 </head>
+
 <body>
 
     <%- include ('../partials/header.ejs') %>
-
-    <main>
-        <section id="banner">
-            <div id="forms">
-                <div id="circle">
-                </div>
-                <div id="hexagons">
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag1.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag2.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag3.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag4.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag5.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag6.jpeg" alt="img">
-                    </div>
-                    <div class="hexagon">
-                        <img class="hexagon-img" src="/assets/banner/imag7.jpeg" alt="img">
-                    </div>
-                </div>
-            </div>
-            <div id="text">
+        <main>
+            <section id="banner">
                 <p>We are specialists in structural desing and analysis_</p>
-                <div class="dossierDownload">
-                    <a  class="dossierDownload" href="../assets/dossier.pdf" download="dossier">
-                        DOWNLOAD OUR DOSSIER
-                    </a>
+                <div id="banner-download">
+                    <h3>DOWNLOAD OUR DOSSIER</h3>
+                    <div id="banner-download-items">
+                        <div><a href="/assets/dossier-Teknik-23-ENG.pdf" download="dossier">EN</a></div>
+                        <div><a href="/assets/dossier-Teknik-22-ESP.pptx.pdf" download="dossier">ES</a></div>
+                        <div><a href="/assets/dossier_Teknik_22_ITA.pdf" download="dossier">IT</a></div>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="about">
-            <div class="about">
-                <p class="text-ligth">We are a highly specialised team of professionals, passionate about structure and geotechnical projects. <br>We fervently believe that the coordination of the different areas involved are key to obtain harmonious and efficient results.<br>Under constant updating and training, we use cutting-edge technologies aim to provide the best solution for your project.</p>
-                <p class="text-heavy">Our <span>VISION</span> is committed to reinforce the role of the structure within architecture as a configurator of the space, not merely a support.</p>
-            </div>
-            <div class="about">
-                <h2>OUR PRESENCE IN THE WORLD</h2>
-                <img id="map-img" src="../assets/map.png" alt="img"/>
-            </div>
-            <div class="about">
-                <h2>OUR TEAM</h2>
-                <ul id="team-list">
-                    <% teamMembers.forEach((teamMember) => { %>
-                    <li class="team-item">
-                        <h4><%= teamMember.name %><br><span><%= teamMember.type %></span></h4>
-                        <h5><%= teamMember.position %></h5>
-                        <a id="our-linkedIn" href="linkanjsldckhlaskud"><%= teamMember.linkedin %></a>
-                    </li>
-                    <% }); %>
+
+                <div id="banner-mobile">
+                    <div id="hexagons">
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag1.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag2.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag3.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag4.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag5.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag6.jpeg" alt="img">
+                        </div>
+                        <div class="hexagon">
+                            <img class="hexagon-img" src="/assets/home/banner/imag7.jpeg" alt="img">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="banner-desktop">
+                    <div id="banner-desktop-img">
+                        <img src="/assets/home/carousel/CLT-Modeling.png" alt="imgBanner" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="premises">
+                <h1>WHY CHOOSE US?</h1>
+                <ul class="premises-list">
+                    <% premises.forEach ((premise)=> { %>
+                        <li class="premises-list-item">
+                            <div><img src="<%= premise.img %>" alt="service image" /></div>
+                            <div>
+                                <h2>
+                                    <%= premise.name %>
+                                </h2>
+                                <p>
+                                    <%= premise.description %>
+                                </p>
+                            </div>
+                        </li>
+                        <% }); %>
                 </ul>
-            </div>
+            </section>
 
-        </section>
+            <section id="about">
+                <p>Our <span id="about-vision">VISION</span> is committed to reinforce the role of the structure
+                    within architecture as a configurator of the space, not merely a support.</p>
+                <h1>OUR PRESENCE IN THE WORLD</h1>
+                <img id="about-map-img" src="/assets/home/map.png" alt="mapImg" />
+                <h1>OUR TEAM</h1>
+                <ul id="about-team">
+                    <% teamMembers.forEach((teamMember)=> { %>
+                        <li class="about-team-member">
+                            <p>
+                                <%= teamMember.name %><br><span>
+                                        <%= teamMember.type %>
+                                    </span>
+                            </p>
+                            <p style="font-weight: lighter;">
+                                <%= teamMember.position %>
+                            </p>
+                            <a id="about-team-member-linkedIn" href="<%= teamMember.linkedin %>">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <% }); %>
+                </ul>
 
-    </main>
+            </section>
 
-    <%- include ('../partials/footer.ejs') %>
+        </main>
+
+        <%- include ('../partials/footer.ejs') %>
+            <%- include ('../partials/script.ejs') %>
+                <%- include ('../partials/scriptHome.ejs') %>
+
+
 </body>
+
 </html>

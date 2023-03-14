@@ -1,0 +1,107 @@
+#about {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about h1 {
+    margin-top: 3em;
+}
+
+#about-vision {
+    color: var(--darkYellow-color);
+}
+
+#about-map-img {
+    padding: 1em 0;
+    max-width: 90%;
+}
+
+#about-team {
+    margin: 1em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-team-member {
+    width: 80%;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px var(--gray-color);
+    list-style: none;
+    font-size: .8em;
+}
+
+#about-team-member-linkedIn i {
+    padding: 0;
+    font-size: 24px;
+    color: var(--darkYellow-color);
+}
+
+/* TABLET */
+@media (min-width: 700px) {
+    #about {
+        padding: 1em 5em;
+    }
+
+    .about-team-member {
+        width: 30%;
+        height: 75px;
+        font-size: .7em;
+    }
+}
+
+/* NOTEBOOK */
+@media (min-width: 1200px) {
+    #about {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #about p {
+        font-size: 1.2em;
+        padding: 0 5em;
+    }
+
+    #about-map-img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
+    .about-team-member {
+        width: 35%;
+        height: 90px;
+    }
+}
+
+/* RETINA */
+@media (min-width: 1900px) {
+    #about p {
+        font-size: 2em;
+    }
+
+    #about-map-img {
+        max-width: 70%;
+    }
+
+    .about-team-member {
+        height: 150px;
+    }
+
+    .about-team-member p {
+        font-size: 1.1em;
+    }
+
+    #about-team-member-linkedIn i {
+        font-size: 36px;
+    }
+}

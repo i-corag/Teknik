@@ -1,10 +1,11 @@
 
-const sendContactForm = (req , res) => {
-    return res.render ('pages/contact.ejs');
+const sendContactForm = (req, res) => {
+    return res.render('pages/contact.ejs');
 };
 
-const sendMessageReceived = (req , res) => {
-    return res.render ('pages/messageReceived.ejs');
-};
+const sendReceived = (req, res) => {
+    return res.render('pages/received.ejs');
+}
 
-module.exports = { sendContactForm, sendMessageReceived };
+
+module.exports = { sendContactForm, sendReceived };

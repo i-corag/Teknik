@@ -1,9 +1,11 @@
-const {Router} = require ('express');
+const { Router } = require('express');
 const router = Router();
 
-const { sendContactForm , sendMessageReceived} = require ('../controllers/contact.js');
+const { sendContactForm, sendReceived } = require('../controllers/contact.js');
 
-router.get ('/' , sendContactForm);
-router.post ('/' , sendMessageReceived);
+router.get('/', sendContactForm);
+router.get('/received', sendReceived);
 
 module.exports = router;
+
+

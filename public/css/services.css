@@ -1,252 +1,180 @@
-main{
-    margin: 3em 1em;
-    overflow: hidden;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#services-p-mobile , #services-p-desktop {
-    margin: 1em 0;
-}
-
-h2{
-    margin: 4em 0 2em 0;
-}
-
-#services-p-desktop{
+#services-desktop {
     display: none;
 }
 
-.services{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
+#services-mobile {
+    font-weight: lighter;
+    margin-bottom: 2em;
 }
 
-.services li {
+#services {
+    margin: 1em;
+}
+
+.services {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: .8px solid var(--darkYellow-color);
+
+}
+
+.fa-caret-right {
+    color: var(--darkYellow-color);
+}
+
+#services ul h2 {
+    text-align: center;
+    padding: .5em;
+    font-size: 1em;
+    color: var(--lightYellow-color);
+}
+
+#services ul p {
+    padding: .5em;
+    font-style: italic;
+    color: var(--gray-color);
+}
+
+#services ul li {
+    list-style: none;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 1.5em;
+    padding: .5em;
+}
+
+.services-gallery {
+    padding: 1em;
     width: 100%;
-    height: 13em;
-    border: 1px solid var(--lightGrey-color);
-    border-radius: 4px;
-}
-
-.services li img{
-    width: 100%;
-    height: 60%;
-    object-fit:cover;
-    border-radius: 4px 4px 0 0;
-}
-
-.services li div{
-    width: 100%;
-    height: 40%;
-    padding: 0 .5em .6em .5em;
-}
-
-.services li div p{
-    height: 75%;
-    line-height: 1.2em;
-    overflow-y: auto;
-    padding: .3em;
-}
-
-.premises{
-    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap:2em;
-}
-
-.premises li{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
-.premises li img{
-    width: 40%;
-    object-fit:cover;
+.services-gallery div {
+    width: 70%;
+    border: 1px solid black;
 }
 
-.premises li p{
-    line-height: 1.2em;
+.services-gallery img {
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.premises li h4{
-    font-family: 'din alternate';
-    margin: .5em; 
-    letter-spacing: .03em;
+#services-others {
+    padding: 3em 2em;
+}
+
+#services-others h2 {
+    padding: .5em;
+    text-align: center;
     font-size: 1em;
-    color:var(--lightYellow-color);
+    color: black;
 }
 
-/* MOBILE PLUS */
-@media (min-width: 414px) {
-    .text-ligth{
-        font-size: 1.3em;
-    }
-    h2{
-        font-size: 1.2em;
-    }
-    .services li {
-        height: 16em;
-    }
-    .services li div{
-        padding: 0 .5em 1.3em .5em;
-    }
-    h3{
-        font-size: 1em;
-        margin-top: .5em;
-    }
-    .premises li h4{
-        font-size: 1.2em;
-    }
+#services-others p {
+    line-height: 1.5em;
+    padding: .5em;
+    color: var(--darkYellow-color);
+}
+
+#services-others span {
+    font-weight: lighter;
+    color: black;
 }
 
 /* TABLET */
-@media (min-width: 760px){
-    main{
-        margin: 3em 6em;
-    }
-    .text-ligth{
-        font-size: 1.5em;
-    }
-    h2{
-        font-size: 1.5em;
-    }
-    .services li {
-        height: 15em;
-    }
-    h3{
-        font-size: 1.2em;
-    }
-    .premises li h4{
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 1000px){
-    #services-p-mobile{
+@media (min-width: 700px) {
+    #services-mobile {
         display: none;
     }
-    #services-p-desktop{
-        display: flex;
-        justify-content: center;
-        margin: 1em;
-    }
-    .text-ligth{
-        font-size: 1.6em;
-    }
-    h2{
-        font-size: 1.7em;
-    }
-    .services{
-        gap: 4em;
-    }
-    .services li {
-        display: flex;
-        height: 18em;
-        box-shadow: 0px 0px 3px var(--lightGrey-color);
-    }
-    .services li img{
-        width: 40%;
-        height: 100%;
-        border-radius: 4px 0 0 4px;
-        padding:.5em;
-    }
-    .services li div{
-        width: 60%;
-        height: 100%;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .services li div h3{
-        height: 40%;
-        padding:0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    #services-desktop {
+        display: block;
+        font-weight: lighter;
+        margin: 3em;
         font-size: 1.4em;
     }
-    .services li div p{
-        height: 60%;
-        line-height: 1.2em;
-        padding:0;
-        display: flex;
-        align-items:flex-start;
-        justify-content: center;
+
+    #services {
+        width: 60vw;
+        margin: 1em;
     }
-    .premises{
-        gap:4em;
+
+    h1 {
+        font-size: 1.3em;
     }
-    .premises li img{
-        width: 30%;
+
+    #services ul h2 {
+        font-size: 1.1em;
     }
-    .premises li h4{
-        font-size: 1.7em;
+
+    #services-others h2 {
+        font-size: 1.1em;
     }
-   
 }
 
 /* NOTEBOOK */
-@media (min-width: 1100px) {
-    .services{
-        width: 80%;
-        margin: 0 auto;
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 1.5em;
     }
-    .services li div{
-        padding: 1.5em;
+
+    #services {
+        margin: 3em 0;
+        width: 70vw;
     }
-    .services li div p{
-       font-size: 1.4em;
+
+    #services ul h2 {
+        margin: 1em 0;
+        font-size: 1.5em;
     }
-    .premises li{
-        width: 25%;
+
+    #services ul li,
+    #services ul p {
+        font-size: 1.2em;
     }
-    .premises li img{
-        width: 100%;
+
+    .services {
+        margin-bottom: 4em;
+        border-radius: 10px;
     }
-    .premises li p{
-        font-size: 1.3em;
-        line-height: 1.2em;
+
+    .services-gallery {
+        gap: 12px;
     }
-    .premises li h4{
-        font-size: 1.4em;
+
+    .services-gallery div {
+        width: 30%;
+        height: 250px;
+    }
+
+    #services-others {
+        padding: 4em 2em;
+    }
+
+    #services-others h2 {
+        padding-top: 0;
+        padding-bottom: 1em;
+        font-size: 1.5em;
+    }
+
+    #services-others p {
+        font-size: 1.2em;
     }
 }
 
 /* RETINA */
-@media (min-width: 1440px) {
-    .text-ligth{
-        font-size: 2em;
-    }
-    h2{
-        font-size: 2.2em;
-    }
-}
 
-@media (min-width: 1800px) {
-    .text-ligth{
-        font-size: 2.6em;
-    }
-    h2{
-        font-size: 2.8em;
-    }
-    .services{
-        width: 60%;
-    }
-    .services li {
-        height: 20em;
-    }
-    .services li div p , .services li div h3{
-        font-size: 1.8em;
-    }
-    .premises li p, .premises li h4{
-        font-size: 1.8em;
-    }
-}
 
+@media (min-width: 1920px) {}

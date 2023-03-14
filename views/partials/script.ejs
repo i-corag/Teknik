@@ -1,0 +1,16 @@
+<script>
+    const menuIcon = document.querySelector('#menuIcon');
+    const menuDropdown = document.querySelector('.menuDropdown');
+    const main = document.querySelector('main');
+
+
+    menuIcon.addEventListener('click', toggleMenuDropdown);
+
+    function toggleMenuDropdown() {
+
+        const isMainMarginActive = main.classList.contains('marginActive');
+        !isMainMarginActive ? main.classList.add('marginActive') : main.classList.remove('marginActive')
+
+        menuDropdown.classList.toggle('inactive');
+    }
+</script>

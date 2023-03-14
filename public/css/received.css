@@ -1,0 +1,35 @@
+#received {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    gap: 1em;
+}
+
+#received h3 {
+    text-align: center;
+    font-weight: lighter;
+
+}
+
+#received a {
+    margin: 1em;
+    color: var(--darkYellow-color)
+}
+
+
+/* TABLET */
+@media (min-width: 700px) {}
+
+/* NOTEBOOK */
+@media (min-width: 1200px) {}
+
+/* RETINA */
+@media (min-width: 1900px) {
+
+    #received h3,
+    #received a {
+        font-size: 1.5em;
+    }
+}

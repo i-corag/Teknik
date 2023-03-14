@@ -1,0 +1,12 @@
+<script>
+    let bannerImg = document.querySelector('#banner-desktop-img');
+    let bannerImages = ['/assets/home/carousel/BIM-Modeling.png', '/assets/home/carousel/CLT-Modeling.png', '/assets/home/carousel/Large_scale-Modeling.png', '/assets/home/carousel/tenso_structures-Modeling.png', '/assets/home/carousel/Torre-autosoportada.png', '/assets/home/carousel/sismico.png'];
+    let i = 0;
+
+    function carousel() {
+        (i < bannerImages.length) ? i++ : i = 1;
+        bannerImg.innerHTML = "<img src=" + bannerImages[i - 1] + ">";
+    }
+
+    setInterval(carousel, 3000);
+</script>

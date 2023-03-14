@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-pro-cond" rel="stylesheet">
-    <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/services.css" />
-    <link rel="stylesheet" href="../../../css/footer.css" />
-    <link rel="icon" href="../../public/assets/fav.ico">
-    <title>Teknik Ingenieria y Diseño</title>
-    
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/services.css" />
 </head>
+
 <body>
     <%- include ('../partials/header.ejs') %>
-    <main>
-    <p class="text-ligth" id="services-p-mobile" >Our interdisciplinary team is committed to provide technical solutions to your projects.</p>
-    <p class="text-ligth" id="services-p-desktop" >Our interdisciplinary team is committed to provide technical solutions to your projects.<br>Characterized by constant improvement in structural design, expedition and detail orientation with BIM implementation.<br>Technique, efficiency and experience are the bases of our work.</p>
-    <h2>our solutions to your business</h2>
-    <ul class="services">
-        <% services.forEach ((service) => { %>
-        <li class="service">
-            <img src= "<%= service.img %>" alt="service image"/>
-            <div>
-                <h3><%= service.name %></h3>
-                <p class="text-ligth"><%= service.description %></p>
-            </div>
-        </li>
-        <% }); %>
-    </ul>
+        <main>
+            <p id="services-mobile">Our interdisciplinary team is committed to provide technical
+                solutions to your projects.</p>
+            <p id="services-desktop">Our interdisciplinary team is committed to provide technical
+                solutions to your projects.<br>Characterized by constant improvement in structural design, expedition
+                and detail orientation with BIM implementation.<br>Technique, efficiency and experience are the bases of
+                our work.</p>
 
-    <h2>why choose us?</h2>
-    <ul class="premises">
-        <% premises.forEach ((premise) => { %>
-        <li class="premise">
-            <img src= "<%= premise.img %>" alt="service image"/>
-            <h4><%= premise.name %></h4>
-            <p class="text-ligth"><%= premise.description %></p>
-        </li>
-        <% }); %>
-    </ul>
+            <h1>our solutions to your business</h1>
 
-    </main>
-    <%- include ('../partials/footer.ejs') %>
+            <section id="services">
+                <% services.forEach ((service)=> { %>
+                    <ul class="services">
+                        <h2>
+                            <%= service.name%>
+                        </h2>
+                        <p>
+                            <%= service.other%>
+                        </p>
+                        <% service.description.forEach ((item)=> { %>
+                            <li><i class="fa-solid fa-caret-right"> </i>
+                                <%= item %>
+                            </li>
+                            <% }); %>
+
+                                <div class="services-gallery">
+                                    <% service.images.forEach ((img)=> { %>
+                                        <div><img src="<%=img%>" alt="service image" /></div>
+                                        <% }); %>
+                                </div>
+                    </ul>
+                    <% }); %>
+
+                        <div id="services-others" class="services">
+                            <h2>You can also consult us for other services</h2>
+                            <p class="services-others"><i class="fa-solid fa-caret-right"> </i> Structures surveys and
+                                pathological analyses: <span>destructive and non destructive tests.</span>
+                            </p>
+                            <p class="services-others"><i class="fa-solid fa-caret-right"> </i> Geotechnical studies:
+                                <span>soil studies, determination of geophysical and geomechanical parameters and
+                                    foundation typologies.</span>
+                            </p>
+                            <p class="services-others"><i class="fa-solid fa-caret-right"> </i> Topographic surveys:
+                                <span>topographical surveys with high tech equipment. We also provide our services for
+                                    the control of levels in medium or high scale architectural projects.</span>
+                            </p>
+                        </div>
+            </section>
+
+
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+            <%- include ('../partials/script.ejs') %>
 </body>
+
+
+
 </html>

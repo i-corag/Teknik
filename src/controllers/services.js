@@ -1,8 +1,7 @@
-const {services} = require('../conceptual/services.js');
-const {premises} = require('../conceptual/premises.js');
+const { services } = require('../models/services.js');
 
-const sendServicesView = (req , res ) => {
-    return res.render ('pages/services.ejs', {services , premises});
+const sendServicesView = (req, res) => {
+    return res.render('pages/services.ejs', { services });
 };
 
-module.exports = {sendServicesView};
+module.exports = { sendServicesView };

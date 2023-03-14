@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/din-pro-cond" rel="stylesheet">
-    <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/portfolio2.css" />
-    <link rel="stylesheet" href="../../../css/footer.css" />
-    <link rel="icon" href="../../public/assets/fav.ico">
-    <title>Teknik Ingenieria y Diseño</title>
-    
+    <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/portfolio.css" />
 </head>
+
 <body>
 
     <%- include ('../partials/header.ejs') %>
-    <main>
-        <ul id="portfolio-hexGrid">
-            <% projects.forEach ((project) => { %>
-            <li class="portfolio-hex">
-                
-                    <a class="portfolio-hexLink" href="/portfolio/<%= project.id %>">
-                        <img src="<%= project.img %>" alt="" />
-                        <h1><%= project.name %></h1>
-                        <p><%= project.description %></p>
-                    </a>
-               
-            </li>
-            <% }); %>
-        </ul>
-    </main>
-    <%- include ('../partials/footer.ejs') %>
+        <main>
+            <ul id="portfolio-mobile">
+                <% projects.forEach ((project)=> { %>
+                    <li class="portfolio-mobile-project">
+                        <a class="portfolio-mobile-project-a" href="/portfolio/<%= project.id %>">
+                            <img src="<%= project.coverImg %>" alt="" />
+                            <div class="portfolio-mobile-project-objetive">
+                                <%= project.objetive %>
+                            </div>
+                        </a>
+                    </li>
+                    <% }); %>
+            </ul>
+
+            <ul id="portfolio-desktop">
+                <% projects.forEach ((project)=> { %>
+                    <li class="portfolio-desktop-project">
+                        <a class="portfolio-desktop-project-a" href="/portfolio/<%= project.id %>">
+                            <img src="<%= project.coverImg %>" alt="" />
+                            <div class="portfolio-desktop-project-title">
+                                <%= project.name %>
+                            </div>
+                            <div class="portfolio-desktop-project-objetive">
+                                <%= project.objetive %>
+                            </div>
+                        </a>
+                    </li>
+                    <% }); %>
+            </ul>
+        </main>
+        <%- include ('../partials/footer.ejs') %>
+            <%- include ('../partials/script.ejs') %>
 </body>
+
 </html>

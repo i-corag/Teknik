@@ -1,0 +1,63 @@
+#hexagons {
+    --s: 5.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(var(--s)/2));
+    grid-auto-rows: calc(var(--s) * 1.1547 * 0.75);
+    justify-content: center;
+    margin: 0 1em;
+}
+
+.hexagon {
+    position: relative;
+    background-color: var(--darkGrey-color);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    height: calc(var(--s) * 1.1547);
+    grid-column: span 2;
+}
+
+.hexagon-img {
+    position: absolute;
+    top: 2%;
+    /*para que quede separado el hexagono de color que hace el borde*/
+    left: 2%;
+    /*para que quede separado el hexagono de color que hace el borde*/
+    width: 96%;
+    /*para que quede separado el hexagono de color que hace el borde*/
+    height: 96%;
+    /*para que quede separado el hexagono de color que hace el borde*/
+    object-fit: cover;
+    filter: grayscale(60%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 300ms;
+}
+
+.hexagon-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hexagon:first-of-type {
+    grid-column: 2 / span 2;
+    background-color: var(--darkYellow-color);
+}
+
+.hexagon:nth-of-type(2) {
+    grid-column: 1 /span 2;
+}
+
+.hexagon:nth-of-type(5) {
+    grid-column: 4 /span 2;
+}
+
+.hexagon:nth-of-type(7) {
+    grid-column: 5/span 2;
+}
+
+.hexagon:nth-of-type(4) {
+    background-color: var(--darkYellow-color);
+}
+
+.hexagon:nth-of-type(5) {
+    background-color: var(--darkYellow-color);
+}
